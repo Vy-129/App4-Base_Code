@@ -49,11 +49,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
  	let riskProbability be variable*/
 	function diagnosis(){
 		var riskProbability = (heartdiseases_count/8)*100;
+		//The following code used to replace id probability on page results
+		document.getElementById("probability").innerHTML = "Risk of having heart disease is " + riskProbability + "%";
+
 	}
 	
-	//The following code used to replace id probability on page results
-	document.getElementById("probability").innerHTML = "Risk of having heart disease is " + riskProbability + "%";
-
 </script>	
 
 
@@ -78,11 +78,6 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
   .page:target {
     left: 0vw;
     z-index: 1;
-}
-<!--Code for resizable images-->
-img, object{
-	max-height:90%;
-	max-width:90%;
 }
 </style>
 
@@ -221,13 +216,16 @@ img, object{
 	<div id="header" class="w3-container w3-flat-alizarin">
 		<h1>Results</h1>
 	</div>
-
-	<!--Code is used to display the probability of having heart disease-->
+	
 	<div id="content" class="w3-container">
+		<!--Results will be displayed after hitting the button-->
+		<a onclick="diagnosis();" class="w3-btn w3-green"> See Results</a>
+		<!--Code is used to display the probability of having heart disease-->
 		<p id="probability"></p>
 		<p>The higher the percentage, the greater the risk you are of having heart disease.</p>
 		<p>However, please consult the doctor for proper diagnosis</p>
 		<p> Please monitor your health closely and check-up once a year for your own wellness </p>
+		<!--Add image on this page with the following code-->
 		<img scr="https://www.heart.org/-/media/Images/Around-the-AHA/2022-Top-10_SC.jpg" alt="Heart Disease Illustration" width="150" height="150">
 	</div>
 </div>	
