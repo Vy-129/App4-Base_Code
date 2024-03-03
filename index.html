@@ -43,6 +43,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	//function to count for the number of answers associated with heart diseases
 	function risk(){
 		heartdiseases_count = heartdiseases_count + 1;
+			alert(heartdiseases_count);
 	}
 
 	/*Create function to compute the probability of user's risk of having heart disease
@@ -218,13 +219,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
 	<div id="content" class="w3-container">
+		<p>The higher the percentage, the greater the risk you are of having heart disease.</p>
+		<p>However, please consult the doctor for proper diagnosis</p>
+		<p> Please monitor your health closely and check-up once a year for your own wellness </p>
 		<!--Results will be displayed after hitting the button-->
 		<a onclick="diagnosis();" class="w3-btn w3-green"> See Results</a>
 		<!--Code is used to display the probability of having heart disease-->
 		<p id="probability"></p>
-		<p>The higher the percentage, the greater the risk you are of having heart disease.</p>
-		<p>However, please consult the doctor for proper diagnosis</p>
-		<p> Please monitor your health closely and check-up once a year for your own wellness </p>
 		<!--Add image on this page with the following code-->
 		<img scr="https://www.heart.org/-/media/Images/Around-the-AHA/2022-Top-10_SC.jpg" alt="Heart Disease Illustration" width="150" height="150">
 	</div>
