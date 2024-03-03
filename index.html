@@ -37,12 +37,20 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <script>
 
-	//variable used to put in funtion to cound for the number of answers associated with heart diseases
+	//variable used to put in function to count for the number of answers associated with heart diseases
 	var heartdiseases_count = 0;
 	
 	//function to count for the number of answers associated with heart diseases
 	function risk(){
 		heartdiseases_count = heartdiseases_count + 1;
+	}
+
+	/*Create function to compute the probability of user's risk of having heart disease
+ 	let riskProbability be variable*/
+	function diagnosis(){
+		var riskProbability = (heartdiseases_count/8)*100;
+		//The following code used to replace id probability on page results
+		document.getElementById("probability").innerHTML = "Risk of having heart disease is " + riskProbabilty + "%";
 	}
 
 </script>	
@@ -202,10 +210,21 @@ img, object{
 	<div id="content" class="w3-container">
 		<p>Do you have high blood cholesterol?</p>
 		<!--Add buttons for answers with yes will add count to risk function-->
-		<a href="#result" onclick="risk();" class="w3-btn w3-green"> Yes</a>
-		<a href="#result" class="w3-btn w3-green"> No</a>
+		<a href="#results" onclick="risk();" class="w3-btn w3-green"> Yes</a>
+		<a href="#results" class="w3-btn w3-green"> No</a>
 	</div>
 </div>
+
+<div class="page" id="results">
+	<!--The following is a page to displaying results-->
+	<div id="header" class="w3-container w3-flat-alizarin">
+		<h1>Results</h1>
+	</div>
+
+	<!--Code is used to display the probability of having heart disease-->
+	<div id="content" class="w3-container">
+		<p id="probability"></p>
+</div>	
 		
 <!--Creat footer for every page-->
 <footer class="w3-bottom w3-container w3-flat-alizarin">
